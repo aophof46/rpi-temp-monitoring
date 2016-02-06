@@ -1,5 +1,5 @@
 #!/bin/bash
-# this calls the temp-DS18B20 python script and wraps it in the cacti necessary info
+# this calls the temp-Yahoo-Weather python script and wraps it in the cacti necessary info
 
 
 if [ "$1" = "-g" ]
