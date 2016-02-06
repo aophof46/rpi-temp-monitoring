@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Grand Rapids, MI</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Grand_Rapids__MI/*http://weather.yahoo.com/forecast/USMI0344_f.html</link>
+<description>Yahoo! Weather for Grand Rapids, MI</description>
+<language>en-us</language>
+<lastBuildDate>Thu, 04 Feb 2016 8:53 pm EST</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Grand Rapids" region="MI"   country="US"/>
+<yweather:units temperature="F" distance="mi" pressure="in" speed="mph"/>
+<yweather:wind chill="16"   direction="220"   speed="6" />
+<yweather:atmosphere humidity="69"  visibility="10"  pressure="30.25"  rising="1" />
+<yweather:astronomy sunrise="7:52 am"   sunset="5:58 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Grand Rapids, MI at 8:53 pm EST</title>
+<geo:lat>42.97</geo:lat>
+<geo:long>-85.66</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Grand_Rapids__MI/*http://weather.yahoo.com/forecast/USMI0344_f.html</link>
+<pubDate>Thu, 04 Feb 2016 8:53 pm EST</pubDate>
+<yweather:condition  text="Partly Cloudy"  code="29"  temp="23"  date="Thu, 04 Feb 2016 8:53 pm EST" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/29.gif"/><br />
+<b>Current Conditions:</b><br />
+Partly Cloudy, 23 F<BR />
+<BR /><b>Forecast:</b><BR />
+Thu - Snow Showers Late. High: 28 Low: 23<br />
+Fri - Mostly Cloudy. High: 33 Low: 26<br />
+Sat - Cloudy. High: 37 Low: 28<br />
+Sun - PM Showers. High: 43 Low: 31<br />
+Mon - Snow Showers. High: 33 Low: 26<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Grand_Rapids__MI/*http://weather.yahoo.com/forecast/USMI0344_f.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Thu" date="4 Feb 2016" low="23" high="28" text="Snow Showers Late" code="46" />
+<yweather:forecast day="Fri" date="5 Feb 2016" low="26" high="33" text="Mostly Cloudy" code="28" />
+<yweather:forecast day="Sat" date="6 Feb 2016" low="28" high="37" text="Cloudy" code="26" />
+<yweather:forecast day="Sun" date="7 Feb 2016" low="31" high="43" text="PM Showers" code="39" />
+<yweather:forecast day="Mon" date="8 Feb 2016" low="26" high="33" text="Snow Showers" code="14" />
+<guid isPermaLink="false">USMI0344_2016_02_08_7_00_EST</guid>
+</item>
+</channel>
+</rss>
+
+<!-- fan1620.sports.bf1.yahoo.com Thu Feb  4 18:26:02 PST 2016 -->
