@@ -10,11 +10,11 @@ import glob
 speriod=(15*60)-1
 locationVar='garage'
 
-w1path = '/sys/bus/w1/devices/28-00000529c691'
-user = 'temps'
-password = 'temps'
-host = 'dell1.aophof46.net'
-database = 'home'
+w1path = ''
+user = ''
+password = ''
+host = ''
+database = '
 
 # store the temperature in the database
 def log_temperature(locationVar,temperature):
