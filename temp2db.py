@@ -8,7 +8,7 @@ import glob
 
 # global variables
 speriod=(15*60)-1
-locationVar='garage'
+locationVar=''
 
 w1path = ''
 user = ''
