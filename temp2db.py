@@ -8,13 +8,26 @@ import glob
 
 # global variables
 speriod=(15*60)-1
-locationVar=''
+# Locations
+# 1 | Garage
+# 2 | Freezer  
+# 3 | Basement 
+# 4 | attic 
 
-w1path = ''
+#Descriptions
+# 1 | Garage Door Open 
+# 2 | Garage Door Closed 
+# 3 | Temperature 
+
+
+locationVar='' 
+descriptionVar='3'
+
+w1path = '/sys/bus/w1/devices/*identifier*'
 user = ''
 password = ''
 host = ''
-database = '
+database = ''
 
 # store the temperature in the database
 def log_temperature(locationVar,temperature):
@@ -26,11 +39,11 @@ def log_temperature(locationVar,temperature):
 	#print(temperature)
 
 	insert_stmt = (
-		"INSERT INTO temps (location, temp) "
-		"VALUES (%s, %s)"
+		"INSERT INTO events (location_id, description_id, data) "
+		"VALUES (%s, %s, %s)"
 	)
 
-	data = (locationVar, temperature)
+	data = (locationVar, descriptionVar, temperature)
 
 	curs.execute(insert_stmt, data)
 

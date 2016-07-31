@@ -6,6 +6,6 @@ if [ "$1" = "-g" ]
 then
 echo .1.3.6.1.2.1.25.1.8.2
 echo gauge
-python ./temp-DS18B20.py
+python /usr/local/bin/temp-DS18B20.py
 fi
 exit 0
