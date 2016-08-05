@@ -8,22 +8,10 @@ import glob
 
 # global variables
 speriod=(15*60)-1
-# Locations
-# 1 | Garage
-# 2 | Freezer  
-# 3 | Basement 
-# 4 | attic 
+locationVar='1' #Garage
+descriptionVar='3' #Temperature
 
-#Descriptions
-# 1 | Garage Door Open 
-# 2 | Garage Door Closed 
-# 3 | Temperature 
-
-
-locationVar='' 
-descriptionVar='3'
-
-w1path = '/sys/bus/w1/devices/*identifier*'
+w1path = '/sys/bus/w1/devices/28-00000529c691'
 user = ''
 password = ''
 host = ''
@@ -31,7 +19,13 @@ database = ''
 
 # store the temperature in the database
 def log_temperature(locationVar,temperature):
-	cnx = MySQLdb.connect(host=host,user=user,passwd=password,db=database)
+	try:
+		cnx = MySQLdb.connect(host=host,user=user,passwd=password,db=database)
+	except MySQLdb.Error, e:
+		print "Error %d: %s" % (e.args[0], e.args[1])
+		sys.exit (1)
+
+
 	curs=cnx.cursor()
 
 	#print("mysql values")
