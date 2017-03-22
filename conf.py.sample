@@ -1,0 +1,21 @@
+# general
+w1folder=""
+
+# database options
+dbuser=""
+dbpassword=""
+dbhost=""
+dbdatabase=""
+
+# sensorloc options
+# 1 = garage
+# 2 = freezer
+# 3 = basement
+# 4 = attic
+sensorloc=""
+
+# sensordesc options
+# 1 = garage door open
+# 2 = garage door closed
+# 3 = temperature
+sensordesc=""

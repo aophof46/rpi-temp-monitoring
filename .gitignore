@@ -1,0 +1,3 @@
+# ignore conf files
+conf.*
+!conf.py.sample
