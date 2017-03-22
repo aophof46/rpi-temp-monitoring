@@ -5,22 +5,16 @@ import MySQLdb
 import os
 import time
 import glob
+from conf import *
 
 # global variables
 speriod=(15*60)-1
-locationVar='1' #Garage
-descriptionVar='3' #Temperature
-
-w1path = '/sys/bus/w1/devices/28-00000529c691'
-user = ''
-password = ''
-host = ''
-database = ''
+w1path = '/sys/bus/w1/devices/' + w1folder
 
 # store the temperature in the database
 def log_temperature(locationVar,temperature):
 	try:
-		cnx = MySQLdb.connect(host=host,user=user,passwd=password,db=database)
+		cnx = MySQLdb.connect(host=dbhost,user=dbuser,passwd=dbpassword,db=dbdatabase)
 	except MySQLdb.Error, e:
 		print "Error %d: %s" % (e.args[0], e.args[1])
 		sys.exit (1)
@@ -29,7 +23,7 @@ def log_temperature(locationVar,temperature):
 	curs=cnx.cursor()
 
 	#print("mysql values")
-	#print(locationVar)
+	#print(sensorloc)
 	#print(temperature)
 
 	insert_stmt = (
@@ -37,7 +31,7 @@ def log_temperature(locationVar,temperature):
 		"VALUES (%s, %s, %s)"
 	)
 
-	data = (locationVar, descriptionVar, temperature)
+	data = (sensorloc, sensordesc, temperature)
 
 	curs.execute(insert_stmt, data)
 
@@ -94,7 +88,7 @@ def main():
 		#print "temperature="+str(temperature)
 
 	# Store the temperature in the database
-	log_temperature(locationVar,temperature)
+	log_temperature(sensorloc,temperature)
 
 
 if __name__=="__main__":

@@ -1,8 +1,9 @@
 #!/usr/bin/python
 
-DEVICE = "/sys/bus/w1/devices/28-0000075341e3/w1_slave"
 import commands
 import sys
+from conf import *
+DEVICE = "/sys/bus/w1/devices/" + w1folder + "/w1_slave"
  
 def get_cpu_temp():
     tempFile = open( "/sys/class/thermal/thermal_zone0/temp" )
