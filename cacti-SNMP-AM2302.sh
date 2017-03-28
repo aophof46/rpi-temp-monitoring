@@ -13,20 +13,12 @@ if [ "$1" = "-t" ]
   then
     echo .1.3.6.1.2.1.25.1.8.1
     echo gauge
-    python $DIR/sensor-AM2302.py -t
+    cat /tmp/temp-AM2302.txt
 fi
 if [ "$1" = "-h" ]
   then
     echo .1.3.6.1.2.1.25.1.8.2
     echo gauge
-    python $DIR/sensor-AM2302.py -h
-fi
-if [ "$1" = "-b" ]
-  then
-    echo .1.3.6.1.2.1.25.1.8.3
-    echo gauge
-    python $DIR/sensor-AM2302.py -b
+    cat /tmp/humidity-AM2302.txt 
 fi
 exit 0
-~
-

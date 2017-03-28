@@ -38,12 +38,7 @@ temperature = temperature * 9/5.0 + 32
 # guarantee the timing of calls to read the sensor).
 # If this happens try again!
 if humidity is not None and temperature is not None:
-	if sys.argv[1] == "-t":
-		print temperature
-	elif sys.argv[1] == "-h":
-		print humidity
-	elif sys.argv[1] == "-b":	
-		print('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temperature, humidity))
+	print humidity
 else:
     print('Failed to get reading. Try again!')
     sys.exit(1)
