@@ -3,7 +3,6 @@
 import commands
 import sys
 from conf import *
-DEVICE = "/sys/bus/w1/devices/" + w1folder + "/w1_slave"
  
 def get_cpu_temp():
     tempFile = open( "/sys/class/thermal/thermal_zone0/temp" )
@@ -20,7 +19,7 @@ def get_gpu_temp():
     return (1.8* float(gpu_temp))+32
 
 def get_probe_temp():
-	tempFile = open(DEVICE)
+	tempFile = open(device_file)
 	lines = tempFile.readlines() 
 	tempFile.close()
         while lines[0].strip()[-3:] != 'YES':

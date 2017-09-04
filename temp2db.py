@@ -9,7 +9,6 @@ from conf import *
 
 # global variables
 speriod=(15*60)-1
-w1path = '/sys/bus/w1/devices/' + w1folder
 
 # store the temperature in the database
 def log_temperature(locationVar,temperature):
@@ -70,21 +69,12 @@ def main():
 	os.system('sudo modprobe w1-gpio')
 	os.system('sudo modprobe w1-therm')
 
-	# search for a device file that starts with 28
-	devicelist = glob.glob(w1path)
-	if devicelist=='':
-		return None
-	else:
-		# append /w1slave to the device file
-		w1devicefile = devicelist[0] + '/w1_slave'
-
-
 	# get the temperature from the device file
-	temperature = get_temp(w1devicefile)
+	temperature = get_temp(device_file)
 	if temperature == None:
 		# Sometimes reads fail on the first attempt
 		# so we need to retry
-		temperature = get_temp(w1devicefile)
+		temperature = get_temp(device_file)
 		#print "temperature="+str(temperature)
 
 	# Store the temperature in the database
