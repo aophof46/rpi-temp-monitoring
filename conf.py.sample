@@ -1,13 +1,15 @@
-#!/usr/bin/python3
-
-import sys
-import glob
-
 #general
 ## Find the appropriate device.  If there are multiples, change glob index.
 base_dir = '/sys/bus/w1/devices/'
 device_folder = glob.glob(base_dir + '28*')[0]
 device_file = device_folder + '/w1_slave'
+
+# MQTT Stuff
+mqttbroker=""
+mqttport=""
+mqtttopic=""
+mqttuser=""
+mqttpass=""
 
 # database options
 dbuser=""
