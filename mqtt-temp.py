@@ -1,6 +1,8 @@
 #!/usr/bin/python
 
-import commands
+#import commands
+import subprocess
+from glob import glob
 import sys
 import time
 import socket
@@ -8,7 +10,8 @@ from conf import *
 import paho.mqtt.client as mqtt
 
 hostname=socket.gethostname()
-DEVICE = "/sys/bus/w1/devices/" + w1folder + "/w1_slave"
+#DEVICE = "/sys/bus/w1/devices/" + w1folder + "/w1_slave"
+DEVICE = device_file
 
 #print(hostname)
 #print(w1folder)
@@ -33,7 +36,7 @@ def get_probe_temp():
                 return (1.8*(float(temp_string)/1000))+32
 
 temp = float(get_probe_temp())
-
+#print(temp)
 client = mqtt.Client(client_id=hostname, clean_session=True, userdata=None)
 
 client.username_pw_set(mqttuser,password=mqttpass)
