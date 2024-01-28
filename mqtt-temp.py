@@ -35,7 +35,7 @@ def get_probe_temp():
                 temp_string = lines[1][equals_pos+2:]
                 return (1.8*(float(temp_string)/1000))+32
 
-temp = float(get_probe_temp())
+temp = float("{:.2f}".format(get_probe_temp()))
 #print(temp)
 client = mqtt.Client(client_id=hostname, clean_session=True, userdata=None)
 
